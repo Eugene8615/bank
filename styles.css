@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: black;
+}
+
+header, footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.card-number {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.expiry-date {
+    font-size: 14px;
+    color: #555;
+}
+
+.add-card-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-card-button:hover {
+    background-color: #45a049;
+}
+
+#time-battery-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Чтобы обеспечить растягивание по всей ширине экрана */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#time-battery-info p {
+    margin: 5px;
+}
+
+#battery-level {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+#battery-indicator {
+   border: solid 1px; 
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 10px; /* Закругленные углы */
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Добавим внутренний отступ */
+    color: white;
+    font-size: 14px; /* Размер шрифта */
+}
+
+#battery-percentage {
+    margin-right: 30px;
+}
