@@ -9,8 +9,29 @@ document.addEventListener('DOMContentLoaded', function() {
         if ('getBattery' in navigator) {
             navigator.getBattery().then(function(battery) {
                 var level = Math.round(battery.level * 100);
-                document.getElementById('battery-indicator').innerText = level + '%';
+                updateBatteryIndicator(level);
             });
+        }
+    }
+
+    function updateBatteryIndicator(level) {
+        var indicator = document.getElementById('battery-indicator');
+        var percentageText = document.getElementById('battery-percentage');
+
+        // Обновляем текст с процентами
+        if (percentageText) {
+            percentageText.innerText = level;
+        }
+
+        // Выбираем цвет в зависимости от уровня заряда
+        if (indicator) {
+            if (level < 20) {
+                indicator.style.backgroundColor = 'red';
+            } else if (level < 50) {
+                indicator.style.backgroundColor = 'yellow';
+            } else {
+                indicator.style.backgroundColor = 'green';
+            }
         }
     }
 
@@ -21,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navigator.getBattery().then(function(battery) {
             function updateBatteryInfo() {
                 var level = Math.round(battery.level * 100);
-                document.getElementById('battery-indicator').innerText = level;
+                updateBatteryIndicator(level);
             }
 
             updateBatteryInfo();

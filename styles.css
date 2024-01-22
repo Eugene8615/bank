@@ -13,11 +13,11 @@ header, footer {
 #card-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
 }
 
 .card {
+    width: 210px;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 15px;
@@ -78,16 +78,15 @@ header, footer {
 
 #battery-indicator {
    border: solid 1px; 
-    height: 20px;
-    background-color: #4CAF50;
-    border-radius: 10px; /* Закругленные углы */
-    display: flex;
-    align-items: center;
-    padding: 0 10px; /* Добавим внутренний отступ */
-    color: white;
-    font-size: 14px; /* Размер шрифта */
+   height: 20px;
+   border-radius: 10px; /* Закругленные углы */
+   display: flex;
+   align-items: center;
+   padding: 0 10px; /* Добавим внутренний отступ */
+   font-size: 14px; /* Размер шрифта */
+   color: white; /* Добавим белый цвет текста */
 }
 
 #battery-percentage {
-    margin-right: 30px;
+    color: white;
 }
